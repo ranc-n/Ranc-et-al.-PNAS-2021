@@ -1,0 +1,16 @@
+parameter;value
+output_directory_path;/Path/to/outputs/
+time_series_path;/Path/to/Ranc_et_al_2021_PNAS_data_population_ts.txt
+initialization_data_path;/Path/to/Ranc_et_al_2021_PNAS_data_population_tslv.txt
+model_type;2
+fs_light_i_beta;-0.600228707042899
+fs_light_r_beta;-0.278996071135109
+fs_light_abs_r_beta;0
+fs_min_daily_temp_beta;-0.117596668488228
+fs_res_pres_beta;-4.75011835301304
+fs_res_pres_within_beta;-0.963388077358379
+fs_res_access_beta;1.98249865393857
+fs_res_access_within_beta;1.03242812668855
+manipulated_fs_pref;0.816110362029708
+ref_decay_rate;0.00515997164813723
+att_decay_rate;0.0317676568337781
