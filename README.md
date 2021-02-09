@@ -8,7 +8,6 @@ N. Ranc, P.R. Moorcroft, F. Ossi & F. Cagnacci. 2021. Memory drives foraging dec
 The C++ program calculates the likelihood of a given parameter set given the empirical time-series.\
 <br>
 <br>
-<br>
 
 ## Inputs
 1. **Ranc_et_al_2021_PNAS_data_population_ts.csv**: time-series
@@ -36,8 +35,8 @@ This file stores the **time since last visit** and corresponding accessibility f
 * **access_a**: resource accessibility at A in the last visit (1 = accessible; 0 = inaccessible)
 <br>
 
-### configuration_files
-This folder stores the configuration files required to reproduce the results of the six fitted models (the parameter values in the config files have been estimated through maximum likelihood):
+### Configuration files
+The *Configuration_files* folder stores the configuration files required to reproduce the results of the six fitted models (the parameter values in the config files have been estimated through maximum likelihood):
 * **config_omniscience_full.txt**: full population-level omniscience model
 * **config_perception_full.txt**: full population-level perception model
 * **config_memory_full.txt**: full population-level memory model
@@ -52,11 +51,37 @@ This folder stores the configuration files required to reproduce the results of 
 * **config_perception_best_medianInd.txt**: best median of individual-level perception models (does not include light_abs_r)
 * **config_memory_best_medianInd.txt**: best median of individual-level memory models (does not include light_abs_r)
 <br>
-<br>
+
+The configuration files list 15 parameters:
+* **output_directory_path**: /Path/to/outputs/
+* **time_series_path**: /Path/to/Ranc_et_al_2021_PNAS_data_population_ts.txt
+* **initialization_data_path**: /Path/to/Ranc_et_al_2021_PNAS_data_population_tslv.txt
+* **model_type**: 0 (omniscience), 1 (perception) or 3 (memory)
+* **fs_light_i_beta**: selection coefficient for light intensity
+* **fs_light_r_beta**: selection coefficient for light rate of change
+* **fs_light_abs_r_beta**: selection coefficient light absolute rate of change
+* **fs_min_daily_temp_beta**: selection coefficient for minimum daily temperature
+* **fs_res_pres_beta**: between-state feeding site attraction intercept
+* **fs_res_pres_within_beta**: within-state feeding site attraction intercept
+* **fs_res_access_beta**: between-state selection for accessible feeding sites
+* **fs_res_access_within_beta**: within-state selection for accessible feeding sites
+* **manipulated_fs_pref**: preference for the manipulated (M) feeding site over alternates (A)
+* **ref_decay_rate**: spatial (reference) memory decay rate [0,1]
+* **att_decay_rate**: attribute memory decay rate [0,1]
 
 
 ## Outputs
+The program produces two outputs:
+* **objective_function**: log-likelihood of the model parameter set given the data
+* **state_probabilities**: for each hourly record stores the current state, as well as the probabilities that the animal will be at any of the three states *in the next hour*
+
 
 ## Running instructions
+To run the code, the program must first be compiled. For example, using the gcc compiler with an unix shell command line:
 
+*cd /Path/to/code*
+*g++ -std=c++11 Main.cpp Calculate_attraction.cpp Calculate_probability.cpp Likelihood.cpp Load_config_parameters.cpp Load_other_inputs.cpp Load_time_series.cpp Memory_dynamics.cpp -o roe_deer_program*
+
+The program can then be called with a given configuration file; for example:
+*./roe_deer_program -config /Path/to/config_memory_best.txt*
 
