@@ -24,7 +24,6 @@ This file stores the hourly state **time-series** for each animal-year as well a
 * **light_r**: light rate of change (standardized)
 * **light_abs_r**: light absolute rate of change (standardized)
 * **min_temp**: minimum daily temperature (standardized)
-<br>
 
 ### Ranc_et_al_2021_PNAS_data_population_tslv.csv
 This file stores the **time since last visit** and corresponding accessibility for each animal-year to be used for initialization purposes. The file includes the following columns:
@@ -33,24 +32,20 @@ This file stores the **time since last visit** and corresponding accessibility f
 * **tslv_a**: time since last visit of a at the onset of the time-series (in hours)
 * **access_m**: resource accessibility at M in the last visit (1 = accessible; 0 = inaccessible)
 * **access_a**: resource accessibility at A in the last visit (1 = accessible; 0 = inaccessible)
-<br>
 
 ### Configuration files
 The *Configuration_files* folder stores the configuration files required to reproduce the results of the six fitted models (the parameter values in the config files have been estimated through maximum likelihood):
 * **config_omniscience_full.txt**: full population-level omniscience model
 * **config_perception_full.txt**: full population-level perception model
 * **config_memory_full.txt**: full population-level memory model
-<br>
 
 * **config_omniscience_best.txt**: best population-level omniscience model (does not include light_abs_r)
 * **config_perception_best.txt**: best population-level perception model (does not include light_abs_r)
 * **config_memory_best.txt**: best population-level memory model (does not include light_abs_r)
-<br>
 
 * **config_omniscience_best_medianInd.txt**: best median of individual-level omniscience models (does not include light_abs_r)
 * **config_perception_best_medianInd.txt**: best median of individual-level perception models (does not include light_abs_r)
 * **config_memory_best_medianInd.txt**: best median of individual-level memory models (does not include light_abs_r)
-<br>
 
 The configuration files list 15 parameters:
 * **output_directory_path**: /Path/to/outputs/
@@ -68,12 +63,14 @@ The configuration files list 15 parameters:
 * **manipulated_fs_pref**: preference for the manipulated (M) feeding site over alternates (A)
 * **ref_decay_rate**: spatial (reference) memory decay rate [0,1]
 * **att_decay_rate**: attribute memory decay rate [0,1]
+<br>
 
 
 ## Outputs
 The program produces two outputs:
 * **objective_function**: log-likelihood of the model parameter set given the data
 * **state_probabilities**: for each hourly record stores the current state, as well as the probabilities that the animal will be at any of the three states *in the next hour*
+<br>
 
 
 ## Running instructions
@@ -85,3 +82,4 @@ To run the code, the program must first be compiled. For example, using the gcc 
 The program can then be called with a given configuration file; for example:
 *./roe_deer_program -config /Path/to/config_memory_best.txt*
 
+The program can then be called with any optimization algorithm to estimate the model parameters (MCMC, Particle Swarm Optimization, etc.).
