@@ -3,10 +3,12 @@
 Publicly available dataset and program code for:
 
 N. Ranc, P.R. Moorcroft, F. Ossi & F. Cagnacci. 2021. Memory drives foraging decisions in a large wild mammal: evidence from a field experiment. Proceedings of the National Academy of Sciences of the United States of America. https://doi.org/XXXXXXXXXXXXXX
+<br>
+The C++ program calculates the likelihood of a given parameter set given the empirical time-series.\
+<br>
+<br>
+<br>
 
-The C++ program calculates the likelihood of a given parameter set given the empirical time-series.
-\
-\
 ## Inputs
 1. **Ranc_et_al_2021_PNAS_data_population_ts.csv**: time-series
 1. **Ranc_et_al_2021_PNAS_data_population_tslv.csv**: time since last visit and accessibility for initialization
@@ -35,14 +37,17 @@ This folder stores the configuration files required to reproduce the results of 
 * **config_omniscience_full.txt**: full population-level omniscience model
 * **config_perception_full.txt**: full population-level perception model
 * **config_memory_full.txt**: full population-level memory model
-\
+<br>
 * **config_omniscience_best.txt**: best population-level omniscience model (does not include light_abs_r)
 * **config_perception_best.txt**: best population-level perception model (does not include light_abs_r)
 * **config_memory_best.txt**: best population-level memory model (does not include light_abs_r)
-\
+<br>
+
 * **config_omniscience_best_medianInd.txt**: best median of individual-level omniscience models (does not include light_abs_r)
 * **config_perception_best_medianInd.txt**: best median of individual-level perception models (does not include light_abs_r)
 * **config_memory_best_medianInd.txt**: best median of individual-level memory models (does not include light_abs_r)
+<br>
+<br>
 
 
 ## Outputs
