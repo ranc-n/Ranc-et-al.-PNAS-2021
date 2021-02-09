@@ -2,14 +2,14 @@
 
 Publicly available dataset and program code for:
 
-N. Ranc, P.R. Moorcroft, F. Ossi & F. Cagnacci. 2021. Memory drives foraging decisions in a large wild mammal: evidence from a field experiment. Proceedings of the National Academy of Sciences of the United States of America. https://doi.org/XXXXXXXXXXXXXX
+**N. Ranc, P.R. Moorcroft, F. Ossi & F. Cagnacci. 2021. Memory drives foraging decisions in a large wild mammal: evidence from a field experiment. *Proceedings of the National Academy of Sciences of the United States of America*. https://doi.org/XXXXXXXXXXXXXX**
 <br> 
 <br>
 The mechanistic state transition model is written as a C++ program. The code made available here calculates the likelihood of a specific parameter set given the empirical time-series.\
 <br>
 <br>
 
-### Inputs
+### 1. Inputs
 1. *Ranc_et_al_2021_PNAS_data_population_ts.csv*: time-series
 1. *Ranc_et_al_2021_PNAS_data_population_tslv.csv*: time since last visit and accessibility for initialization
 1. *Configuration files*: input parameter values
@@ -63,14 +63,14 @@ The configuration files list 15 parameters:
 <br>
 
 
-### Outputs
+### 2. Outputs
 The program produces two outputs:
 * *objective_function*: log-likelihood of the model parameter set given the data
 * *state_probabilities*: for each hourly record stores the current state, as well as the probabilities that the animal will be at any of the three states *in the next hour*
 <br>
 
 
-### Running instructions
+### 3. Running instructions
 To run the code, the program must first be compiled. For example, using the gcc compiler with an unix shell command line:
 
 *cd /Path/to/code*
