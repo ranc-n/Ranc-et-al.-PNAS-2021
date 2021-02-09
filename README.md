@@ -34,11 +34,9 @@ This folder stores the configuration files required to reproduce the results of 
 * **config_omniscience_full.txt**: full population-level omniscience model
 * **config_perception_full.txt**: full population-level perception model
 * **config_memory_full.txt**: full population-level memory model
-
 * **config_omniscience_best.txt**: best population-level omniscience model (does not include light_abs_r)
 * **config_perception_best.txt**: best population-level perception model (does not include light_abs_r)
 * **config_memory_best.txt**: best population-level memory model (does not include light_abs_r)
-
 * **config_omniscience_best_medianInd.txt**: best median of individual-level omniscience models (does not include light_abs_r)
 * **config_perception_best_medianInd.txt**: best median of individual-level perception models (does not include light_abs_r)
 * **config_memory_best_medianInd.txt**: best median of individual-level memory models (does not include light_abs_r)
