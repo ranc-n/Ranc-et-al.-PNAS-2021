@@ -13,13 +13,12 @@ The mechanistic state transition model is written as a C++ program. The code mad
 1. *Ranc_et_al_2021_PNAS_data_population_ts.csv*: time-series
 1. *Ranc_et_al_2021_PNAS_data_population_tslv.csv*: time since last visit and accessibility for initialization
 1. *Configuration files*: input parameter values
-<br>
 
 #### Ranc_et_al_2021_PNAS_data_population_ts.csv
 This file stores the hourly state **time-series** for each animal-year as well as corresponding covariates. The file includes the following columns:
 * *exp_id*: animal-year identifier (short code for experimental id)
 * *current_state_code*: resource state currently utilized; 1 = manipulated feeding site (M); 2 = alternative feeding site (A); 3 = vegetation (V)
-* *res_access_m**: accessibility of resources at the manipulated feeding site (M); 1 during pre-closure and post-closure; 0 during closure
+* *res_access_m*: accessibility of resources at the manipulated feeding site (M); 1 during pre-closure and post-closure; 0 during closure
 * *light_i*: light intensity (standardized)
 * *light_r*: light rate of change (standardized)
 * *light_abs_r*: light absolute rate of change (standardized)
@@ -35,39 +34,39 @@ This file stores the **time since last visit** and corresponding accessibility f
 
 #### Configuration files
 The *Configuration_files* folder stores the configuration files required to reproduce the results of the six fitted models (the parameter values in the config files have been estimated through maximum likelihood):
-* **config_omniscience_full.txt**: full population-level omniscience model
-* **config_perception_full.txt**: full population-level perception model
-* **config_memory_full.txt**: full population-level memory model
-* **config_omniscience_best.txt**: best population-level omniscience model (does not include light_abs_r)
-* **config_perception_best.txt**: best population-level perception model (does not include light_abs_r)
-* **config_memory_best.txt**: best population-level memory model (does not include light_abs_r)
-* **config_omniscience_best_medianInd.txt**: best median of individual-level omniscience models (does not include light_abs_r)
-* **config_perception_best_medianInd.txt**: best median of individual-level perception models (does not include light_abs_r)
-* **config_memory_best_medianInd.txt**: best median of individual-level memory models (does not include light_abs_r)
+* *config_omniscience_full.txt*: full population-level omniscience model
+* *config_perception_full.txt*: full population-level perception model
+* *config_memory_full.txt*: full population-level memory model
+* *config_omniscience_best.txt*: best population-level omniscience model (does not include light_abs_r)
+* *config_perception_best.txt*: best population-level perception model (does not include light_abs_r)
+* *config_memory_best.txt*: best population-level memory model (does not include light_abs_r)
+* *config_omniscience_best_medianInd.txt*: best median of individual-level omniscience models (does not include light_abs_r)
+* *config_perception_best_medianInd.txt*: best median of individual-level perception models (does not include light_abs_r)
+* *config_memory_best_medianInd.txt*: best median of individual-level memory models (does not include light_abs_r)
 
 The configuration files list 15 parameters:
-* **output_directory_path**: /Path/to/outputs/
-* **time_series_path**: /Path/to/Ranc_et_al_2021_PNAS_data_population_ts.txt
-* **initialization_data_path**: /Path/to/Ranc_et_al_2021_PNAS_data_population_tslv.txt
-* **model_type**: 0 (omniscience), 1 (perception) or 3 (memory)
-* **fs_light_i_beta**: selection coefficient for light intensity
-* **fs_light_r_beta**: selection coefficient for light rate of change
-* **fs_light_abs_r_beta**: selection coefficient light absolute rate of change
-* **fs_min_daily_temp_beta**: selection coefficient for minimum daily temperature
-* **fs_res_pres_beta**: between-state feeding site attraction intercept
-* **fs_res_pres_within_beta**: within-state feeding site attraction intercept
-* **fs_res_access_beta**: between-state selection for accessible feeding sites
-* **fs_res_access_within_beta**: within-state selection for accessible feeding sites
-* **manipulated_fs_pref**: preference for the manipulated (M) feeding site over alternates (A)
-* **ref_decay_rate**: spatial (reference) memory decay rate [0,1]
-* **att_decay_rate**: attribute memory decay rate [0,1]
+* *output_directory_path*: /Path/to/outputs/
+* *time_series_path*: /Path/to/Ranc_et_al_2021_PNAS_data_population_ts.txt
+* *initialization_data_path*: /Path/to/Ranc_et_al_2021_PNAS_data_population_tslv.txt
+* *model_type*: 0 (omniscience), 1 (perception) or 3 (memory)
+* *fs_light_i_beta*: selection coefficient for light intensity
+* *fs_light_r_beta*: selection coefficient for light rate of change
+* *fs_light_abs_r_beta*: selection coefficient light absolute rate of change
+* *fs_min_daily_temp_beta*: selection coefficient for minimum daily temperature
+* *fs_res_pres_beta*: between-state feeding site attraction intercept
+* *fs_res_pres_within_beta*: within-state feeding site attraction intercept
+* *fs_res_access_beta*: between-state selection for accessible feeding sites
+* *fs_res_access_within_beta*: within-state selection for accessible feeding sites
+* *manipulated_fs_pref*: preference for the manipulated (M) feeding site over alternates (A)
+* *ref_decay_rate*: spatial (reference) memory decay rate [0,1]
+* *att_decay_rate*: attribute memory decay rate [0,1]
 <br>
 
 
 ### Outputs
 The program produces two outputs:
-* **objective_function**: log-likelihood of the model parameter set given the data
-* **state_probabilities**: for each hourly record stores the current state, as well as the probabilities that the animal will be at any of the three states *in the next hour*
+* *objective_function*: log-likelihood of the model parameter set given the data
+* *state_probabilities*: for each hourly record stores the current state, as well as the probabilities that the animal will be at any of the three states *in the next hour*
 <br>
 
 
