@@ -73,7 +73,7 @@ The program produces two outputs:
 ### 3. Running instructions
 To run the code, the program must first be compiled. For example, using the gcc compiler with an unix shell command line:
 
-*cd /Path/to/code*
+*cd /Path/to/Code*
 *g++ -std=c++11 Main.cpp Calculate_attraction.cpp Calculate_probability.cpp Likelihood.cpp Load_config_parameters.cpp Load_other_inputs.cpp Load_time_series.cpp Memory_dynamics.cpp -o roe_deer_program*
 <br>
 
