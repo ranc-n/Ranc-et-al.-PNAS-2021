@@ -2,7 +2,8 @@
 
 Publicly available dataset and program code for:
 
-**N. Ranc, P.R. Moorcroft, F. Ossi & F. Cagnacci. 2021. Experimental evidence of memory-based foraging decisions in a large wild mammal. *Proceedings of the National Academy of Sciences of the United States of America*. https://doi.org/XXXXXXXXXXXXXX**
+**N. Ranc, P.R. Moorcroft, F. Ossi & F. Cagnacci. 2021. Experimental evidence of memory-based foraging decisions in a large wild mammal. *Proceedings of the National Academy of Sciences of the United States of America* Vol. 118 e2014856118. https://doi.org/10.1073/pnas.2014856118
+**
 <br> 
 <br>
 The mechanistic state transition model is written as a C++ program. The code made available here calculates the likelihood of a specific parameter set given the empirical time-series.\
