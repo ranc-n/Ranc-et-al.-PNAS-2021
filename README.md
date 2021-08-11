@@ -13,7 +13,7 @@ The mechanistic state transition model is written as a C++ program. The code mad
 ### 1. Inputs
 1. *Ranc_et_al_2021_PNAS_data_population_ts.csv*: time-series
 1. *Ranc_et_al_2021_PNAS_data_population_tslv.csv*: time since last visit and accessibility for initialization
-1. *Configuration files*: input parameter values
+1. *Configuration_files*: input parameter values
 
 #### Ranc_et_al_2021_PNAS_data_population_ts.csv
 This file stores the hourly state **time-series** for each animal-year as well as corresponding covariates. The file includes the following columns:
